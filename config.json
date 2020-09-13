@@ -5,7 +5,7 @@
   {
       "local_server":"True",
       "local_host":"localhost",
-      "local_user":"Jaydeep",
+      "local_user":"",
       "local_password":"",
       "local_database":"",
       "fb_url":"https://facebook.com/codinggeek",
