@@ -1,0 +1,30 @@
+
+
+{
+  "params":
+  {
+      "local_server":"True",
+      "local_host":"localhost",
+      "local_user":"Jaydeep",
+      "local_password":"",
+      "local_database":"codinggeek",
+      "fb_url":"https://facebook.com/codinggeek",
+      "tw_url":"https://twitter.com/codinggeek",
+      "gh_url": "https://github.com/codinggeek",
+      "blog_name": "Coding Geek",
+      "tag_line": "Heaven for programmers",
+      "gmail-user":"jagadaledipu@gmail.com",
+      "gmail-password":"Jaydeep@2000",
+      "about_text": "Hi my name is harry and I create programming tutorials and I am a good boy",
+      "no_of_posts": 2,
+      "login_image":"login.svg",
+      "admin_user":"Jaydeep",
+      "admin_password": "Jaydeep",
+      "upload_location":"D:\\LEARN TO CODE\\flask-tut\\static\\img"
+    
+  }
+}
+
+
+  
+  

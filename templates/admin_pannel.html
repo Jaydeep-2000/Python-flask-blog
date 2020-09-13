@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('{{ url_for('static', filename='img/home-bg.jpg') }}')">
+    <div class="overlay"></div>
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                    <h1>Admin Panel</h1>
+                    <span class="subheading">Manage your posts and users</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+            <div>
+                <h1>
+                    <p>Basic Actions</p>
+                </h1>
+                <a href="/add"><button type="button" class="btn btn-primary">Add a New Post</button></a>
+                <a href="/logout"><button type="button" class="btn btn-primary">Logout</button></a>
+
+            </div>
+            <hr>
+            <div>
+                <h1>
+                    <p>Upload a file</p>
+                </h1>
+                <form action="/uploader" method="POST" enctype="multipart/form-data">
+                    <input type="file" name="file1">
+                    <button type="submit" class="btn btn-primary">Upload</button>
+                </form>
+
+            </div>
+            <hr>
+            <h1>
+                <p>Manage Posts</p>
+            </h1>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>sno</th>
+                        <th>Title</th>
+                        <th>Date</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in post %}
+                    <tr>
+                        <th>{{row['sno']}}</th>
+                        <th>{{row['title']}}</th>
+                        <th>{{row['date']}}</th>
+                        <th><a href="/edit/{{row['sno']}}"><button type="button"
+                                    class="btn btn-primary">Edit</button></a></th>
+                        <th><a href="/delete/{{row['sno']}}"><button type="button"
+                                class="btn btn-danger">Delete</button></a></th>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+
+            </table>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- Pager -->
+{% endblock %}
