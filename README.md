@@ -1,2 +1,2 @@
 # Python-flask-blog
-this blog developed with flask
+this blog developed with flask.
